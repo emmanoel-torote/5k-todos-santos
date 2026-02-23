@@ -48,7 +48,7 @@
       backdrop-filter: blur(12px);
     }
     .nav-logo img {
-      height: 75px;
+      height: 44px;
       width: auto;
     }
     .nav-cta {
@@ -664,6 +664,69 @@
       text-align: center;
     }
 
+    /* ─── VIDEO SINGLE ──────────────────────────────────── */
+    .video-wrap-single {
+      max-width: 720px;
+      margin: 2rem auto 0;
+    }
+
+    /* ─── ORGANIZADORES ─────────────────────────────────── */
+    #organizadores {
+      background: var(--cream);
+      padding: 4rem 2rem;
+      border-top: 1px solid rgba(27,58,92,0.08);
+    }
+    .org-grid {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+      max-width: 860px;
+      margin: 2rem auto 0;
+    }
+    .org-photo {
+      flex-shrink: 0;
+    }
+    .org-photo img {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid var(--terracotta);
+      display: block;
+    }
+    .org-logos {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .org-logo img {
+      height: 48px;
+      width: auto;
+      object-fit: contain;
+      opacity: 0.85;
+      transition: opacity 0.2s;
+      filter: brightness(0) saturate(100%) invert(17%) sepia(35%) saturate(600%) hue-rotate(182deg) brightness(95%);
+    }
+    .org-logo img:hover { opacity: 1; }
+    .org-divider {
+      width: 1px;
+      height: 48px;
+      background: rgba(27,58,92,0.15);
+    }
+    .org-names {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      color: var(--warm-gray);
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: 1rem;
+    }
+
     /* ─── SPONSORS ──────────────────────────────────────── */
     #sponsors { background: var(--beige); }
     .sponsors-intro {
@@ -923,10 +986,13 @@
             <strong>100% de las inscripciones van a la causa.</strong>
             <span>Los sponsors cubren el costo total del evento. Tu inscripción es donativo directo.<br>Sponsors cover 100% of event costs. Your registration fee goes directly to the cause.</span>
           </div>
-          <a href="https://padrinocf.org" target="_blank" rel="noopener" class="btn-outline-white">Conoce a Padrino Children · Learn More ↗</a>
+          <a href="https://padrinochildren.org" target="_blank" rel="noopener" class="btn-outline-white">Conoce a Padrino Children · Learn More ↗</a>
         </div>
         <div class="causa-image reveal">
-   <img src="images/causa.jpg" alt="Padrino Children" style="width:100%; height:460px; object-fit:cover; border-radius:4px; opacity:0.85;" />
+          <!-- Reemplaza con imagen real de Padrino Children / construcción del hospital -->
+          <div class="causa-placeholder">
+            <span style="font-size:2.5rem">🏥</span>
+            <span>Agregar foto de<br>Padrino Children<br>images/causa.jpg</span>
           </div>
         </div>
       </div>
@@ -1058,16 +1124,9 @@
         <div><img src="images/gallery-5.jpg" alt="Todos Santos 5K" /></div>
         <div><img src="images/gallery-6.jpg" alt="Todos Santos 5K" /></div>
       </div>
-      <div class="video-wrap reveal">
-        <!-- Reemplaza SRC con los IDs reales de tus videos de YouTube -->
-        <!-- Formato: https://www.youtube.com/embed/TU_VIDEO_ID -->
-        <div class="video-placeholder">
-          <span style="font-size:2rem">▶</span>
-          <span>Video 2024<br>Reemplaza con embed de YouTube<br>https://www.youtube.com/watch?v=gJLwG6vb6io</span>
-        </div>
-        <div class="video-placeholder">
-          <span style="font-size:2rem">▶</span>
-          <span>Video 2025<br>Reemplaza con embed de YouTube<br>youtube.com/embed/VIDEO_ID</span>
+      <div class="video-wrap-single reveal">
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/gJLwG6vb6io" title="Todos Santos 5K 2024" allowfullscreen loading="lazy"></iframe>
         </div>
       </div>
     </div>
@@ -1121,7 +1180,33 @@
           <p>¿Quieres ser patrocinador? · Interested in sponsoring?</p>
           <p>Espacios limitados por nivel · Limited spots per tier</p>
         </div>
-        <a href="mailto:CORREO_CONTACTO" class="btn-primary">Contáctanos · Contact Us</a>
+        <a href="/cdn-cgi/l/email-protection#084b475a5a4d47574b47465c494b5c47" class="btn-primary">Contáctanos · Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORGANIZADORES -->
+  <section id="organizadores">
+    <div class="container" style="text-align:center;">
+      <div class="section-label" style="justify-content:center;">Organizadores · Organizers</div>
+      <div class="org-grid">
+        <div class="org-photo">
+          <!-- Foto de Amy y Emmanoel juntos -->
+          <img src="images/organizadores.jpg" alt="Amy Rex & Emmanoel Rosas" />
+          <p class="org-names" style="margin-top:0.8rem;">Amy Rex & Emmanoel Rosas</p>
+        </div>
+        <div>
+          <div class="org-logos">
+            <div class="org-logo">
+              <img src="images/logo-amyrex.png" alt="Amy Rex" />
+            </div>
+            <div class="org-divider"></div>
+            <div class="org-logo">
+              <img src="images/logo-torote.png" alt="Torote" />
+            </div>
+          </div>
+          <p class="org-names" style="margin-top:1.2rem;">Con el apoyo de · With the support of<br>Casa Tere · Todos Santos, BCS</p>
+        </div>
       </div>
     </div>
   </section>
@@ -1145,7 +1230,7 @@
     </p>
   </footer>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     // Sticky nav
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
