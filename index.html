@@ -339,6 +339,179 @@
     .btn-outline-white:hover { background: rgba(255,255,255,0.08); border-color: white; }
     .causa-image img { width: 100%; height: 460px; object-fit: cover; border-radius: 4px; opacity: 0.85; }
 
+    /* ═══════════════════════════════════════════
+       RUTA — nueva sección
+    ═══════════════════════════════════════════ */
+    #ruta {
+      background: var(--beige);
+      padding: 6rem 2rem;
+      overflow: hidden;
+    }
+
+    .ruta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    /* Lado izquierdo: texto + stats */
+    .ruta-text p {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: #444;
+      margin-bottom: 1.2rem;
+    }
+
+    .ruta-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .ruta-stat {
+      background: white;
+      border: 1px solid rgba(47,86,111,0.1);
+      border-radius: 4px;
+      padding: 1.1rem 1.2rem;
+      border-top: 3px solid var(--terracotta);
+    }
+
+    .ruta-stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1;
+      display: block;
+    }
+
+    .ruta-stat-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--warm-gray);
+      margin-top: 0.3rem;
+      display: block;
+    }
+
+    .ruta-highlights {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+
+    .ruta-highlight-item {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-size: 0.9rem;
+      color: #444;
+    }
+
+    .ruta-highlight-item::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--terracotta);
+      flex-shrink: 0;
+    }
+
+    /* Lado derecho: video vertical */
+    .ruta-video-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .ruta-video-frame {
+      position: relative;
+      width: 100%;
+      max-width: 340px;        /* ancho máximo en desktop */
+      margin: 0 auto;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(47,86,111,0.2);
+      background: var(--navy);
+      /* aspect-ratio 9:16 para video vertical */
+      aspect-ratio: 9 / 16;
+    }
+
+    .ruta-video-frame video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Decorative accent behind the phone frame */
+    .ruta-video-wrap::before {
+      content: '';
+      position: absolute;
+      width: 340px;
+      aspect-ratio: 9 / 16;
+      border: 2px solid var(--terracotta);
+      border-radius: 20px;
+      transform: translate(16px, 16px);
+      pointer-events: none;
+      opacity: 0.4;
+    }
+
+    .ruta-video-outer {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    .ruta-video-caption {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--warm-gray);
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+
+    /* RESPONSIVE ruta */
+    @media (max-width: 768px) {
+      .ruta-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      /* En móvil el video va primero, visualmente más impactante */
+      .ruta-video-outer { order: -1; }
+
+      .ruta-video-frame {
+        max-width: 260px;   /* más angosto en móvil */
+      }
+
+      .ruta-video-wrap::before {
+        width: 260px;
+      }
+
+      .ruta-stats {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .ruta-video-frame {
+        max-width: 220px;
+      }
+      .ruta-video-wrap::before {
+        width: 220px;
+      }
+    }
+
     /* REGISTRO */
     #registro { background: var(--beige); }
     .pricing-wrap {
@@ -594,6 +767,70 @@
     </div>
   </section>
 
+  <!-- ═══════════════════════════════════════════
+       RUTA — nueva sección (antes de registro)
+  ═══════════════════════════════════════════ -->
+  <section id="ruta">
+    <div class="container">
+      <div class="ruta-grid">
+
+        <!-- Texto + datos -->
+        <div class="ruta-text reveal">
+          <div class="section-label">La ruta · The route</div>
+          <h2 class="section-title">Un permiso para<br>correr el pueblo.<br><span class="bilingual">Permission to run the town.</span></h2>
+          <p>Sale de Casa Tere por Miguel Hidalgo, sube por Del Huerto (pasando Romex), baja al centro por Degollado y toma Benito Juárez — la calle principal, con elevación, donde está el Hotel California. Rodea la plaza del pueblo frente a la Iglesia Nuestra Señora del Pilar, pasa por el Teatro y baja la Topete hasta El Palmar.</p>
+          <p>El tramo del Palmar es lo mejor: fresco, húmedo, con canales de irrigación corriendo a los lados. La vuelta es en Café La Esquina y el regreso incluye la subida más pronunciada de toda la ruta — corta pero exigente. Pasa por el Todos Santos Inn, Álvaro Obregón (junto a RARE) y regresa a Casa Tere.</p>
+
+          <div class="ruta-stats">
+            <div class="ruta-stat">
+              <span class="ruta-stat-num">5K</span>
+              <span class="ruta-stat-label">Distancia · Distance</span>
+            </div>
+            <div class="ruta-stat">
+              <span class="ruta-stat-num">↑ Exigente</span>
+              <span class="ruta-stat-label">Desnivel pronunciado · Real hills</span>
+            </div>
+            <div class="ruta-stat">
+              <span class="ruta-stat-num">~km 3</span>
+              <span class="ruta-stat-label">Punto de vuelta · Turnaround</span>
+            </div>
+            <div class="ruta-stat">
+              <span class="ruta-stat-num">99%</span>
+              <span class="ruta-stat-label">Pavimento · Paved surface</span>
+            </div>
+          </div>
+
+          <div class="ruta-highlights">
+            <div class="ruta-highlight-item">Salida &amp; Meta en Casa Tere · C. Miguel Hidalgo</div>
+            <div class="ruta-highlight-item">Calle Benito Juárez: la principal, con Hotel California y desnivel real</div>
+            <div class="ruta-highlight-item">Plaza del pueblo &amp; Iglesia Nuestra Señora del Pilar</div>
+            <div class="ruta-highlight-item">El Palmar: palmeras, canales de agua y brisa fresca al amanecer</div>
+            <div class="ruta-highlight-item">Vuelta en Café La Esquina · ~km 3 · 100m terracería</div>
+            <div class="ruta-highlight-item">Correr con seguridad — las banquetas de Todos Santos no lo permiten solos</div>
+          </div>
+        </div>
+
+        <!-- Video vertical -->
+        <div class="ruta-video-outer reveal">
+          <div class="ruta-video-wrap">
+            <div class="ruta-video-frame">
+              <video
+                src="assets/stravaroutevideo.mp4"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+              ></video>
+            </div>
+            <p class="ruta-video-caption">Flyover de la ruta · Strava route flyover</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- REGISTRO -->
   <section id="registro">
     <div class="container">
@@ -782,7 +1019,7 @@
           </div>
           <div class="sponsor-logo-slot">
             <img src="images/sponsor-taller17.png" alt="taller 17" />
-          </div> 
+          </div>
           <div class="sponsor-logo-slot">
             <img src="images/sponsor-todospool.png" alt="Todos Pool" />
           </div>
@@ -792,6 +1029,7 @@
           <div class="sponsor-logo-slot">
             <img src="images/sponsor-floral.png" alt="Floral Floreria" />
           </div>
+        </div>
       </div>
 
       <div style="margin-bottom: 2rem; text-align:center;" class="reveal">
@@ -841,6 +1079,7 @@
     <div class="footer-links">
       <a href="#about">El evento</a>
       <a href="#causa">La causa</a>
+      <a href="#ruta">La ruta</a>
       <a href="#registro">Inscripción</a>
       <a href="#kits">Kits</a>
       <a href="#galeria">Galería</a>
