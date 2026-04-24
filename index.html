@@ -339,179 +339,6 @@
     .btn-outline-white:hover { background: rgba(255,255,255,0.08); border-color: white; }
     .causa-image img { width: 100%; height: 460px; object-fit: cover; border-radius: 4px; opacity: 0.85; }
 
-    /* ═══════════════════════════════════════════
-       RUTA — nueva sección
-    ═══════════════════════════════════════════ */
-    #ruta {
-      background: var(--beige);
-      padding: 6rem 2rem;
-      overflow: hidden;
-    }
-
-    .ruta-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-      align-items: center;
-    }
-
-    /* Lado izquierdo: texto + stats */
-    .ruta-text p {
-      font-size: 1.05rem;
-      line-height: 1.75;
-      color: #444;
-      margin-bottom: 1.2rem;
-    }
-
-    .ruta-stats {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-
-    .ruta-stat {
-      background: white;
-      border: 1px solid rgba(47,86,111,0.1);
-      border-radius: 4px;
-      padding: 1.1rem 1.2rem;
-      border-top: 3px solid var(--terracotta);
-    }
-
-    .ruta-stat-num {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: var(--navy);
-      line-height: 1;
-      display: block;
-    }
-
-    .ruta-stat-label {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.62rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--warm-gray);
-      margin-top: 0.3rem;
-      display: block;
-    }
-
-    .ruta-highlights {
-      margin-top: 2rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.7rem;
-    }
-
-    .ruta-highlight-item {
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-      font-size: 0.9rem;
-      color: #444;
-    }
-
-    .ruta-highlight-item::before {
-      content: '';
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--terracotta);
-      flex-shrink: 0;
-    }
-
-    /* Lado derecho: video vertical */
-    .ruta-video-wrap {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    .ruta-video-frame {
-      position: relative;
-      width: 100%;
-      max-width: 340px;        /* ancho máximo en desktop */
-      margin: 0 auto;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 20px 60px rgba(47,86,111,0.2);
-      background: var(--navy);
-      /* aspect-ratio 9:16 para video vertical */
-      aspect-ratio: 9 / 16;
-    }
-
-    .ruta-video-frame video {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    /* Decorative accent behind the phone frame */
-    .ruta-video-wrap::before {
-      content: '';
-      position: absolute;
-      width: 340px;
-      aspect-ratio: 9 / 16;
-      border: 2px solid var(--terracotta);
-      border-radius: 20px;
-      transform: translate(16px, 16px);
-      pointer-events: none;
-      opacity: 0.4;
-    }
-
-    .ruta-video-outer {
-      position: relative;
-      display: flex;
-      justify-content: center;
-    }
-
-    .ruta-video-caption {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.62rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--warm-gray);
-      text-align: center;
-      margin-top: 0.5rem;
-    }
-
-    /* RESPONSIVE ruta */
-    @media (max-width: 768px) {
-      .ruta-grid {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-      }
-
-      /* En móvil el video va primero, visualmente más impactante */
-      .ruta-video-outer { order: -1; }
-
-      .ruta-video-frame {
-        max-width: 260px;   /* más angosto en móvil */
-      }
-
-      .ruta-video-wrap::before {
-        width: 260px;
-      }
-
-      .ruta-stats {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .ruta-video-frame {
-        max-width: 220px;
-      }
-      .ruta-video-wrap::before {
-        width: 220px;
-      }
-    }
-
     /* REGISTRO */
     #registro { background: var(--beige); }
     .pricing-wrap {
@@ -767,70 +594,6 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════
-       RUTA — nueva sección (antes de registro)
-  ═══════════════════════════════════════════ -->
-  <section id="ruta">
-    <div class="container">
-      <div class="ruta-grid">
-
-        <!-- Texto + datos -->
-        <div class="ruta-text reveal">
-          <div class="section-label">La ruta · The route</div>
-          <h2 class="section-title">Un permiso para<br>correr el pueblo.<br><span class="bilingual">Permission to run the town.</span></h2>
-          <p>Sale de Casa Tere por Miguel Hidalgo, sube por Del Huerto (pasando Romex), baja al centro por Degollado y toma Benito Juárez — la calle principal, con elevación, donde está el Hotel California. Rodea la plaza del pueblo frente a la Iglesia Nuestra Señora del Pilar, pasa por el Teatro y baja la Topete hasta El Palmar.</p>
-          <p>El tramo del Palmar es lo mejor: fresco, húmedo, con canales de irrigación corriendo a los lados. La vuelta es en Café La Esquina y el regreso incluye la subida más pronunciada de toda la ruta — corta pero exigente. Pasa por el Todos Santos Inn, Álvaro Obregón (junto a RARE) y regresa a Casa Tere.</p>
-
-          <div class="ruta-stats">
-            <div class="ruta-stat">
-              <span class="ruta-stat-num">5K</span>
-              <span class="ruta-stat-label">Distancia · Distance</span>
-            </div>
-            <div class="ruta-stat">
-              <span class="ruta-stat-num">↑ Exigente</span>
-              <span class="ruta-stat-label">Desnivel pronunciado · Real hills</span>
-            </div>
-            <div class="ruta-stat">
-              <span class="ruta-stat-num">~km 3</span>
-              <span class="ruta-stat-label">Punto de vuelta · Turnaround</span>
-            </div>
-            <div class="ruta-stat">
-              <span class="ruta-stat-num">99%</span>
-              <span class="ruta-stat-label">Pavimento · Paved surface</span>
-            </div>
-          </div>
-
-          <div class="ruta-highlights">
-            <div class="ruta-highlight-item">Salida &amp; Meta en Casa Tere · C. Miguel Hidalgo</div>
-            <div class="ruta-highlight-item">Calle Benito Juárez: la principal, con Hotel California y desnivel real</div>
-            <div class="ruta-highlight-item">Plaza del pueblo &amp; Iglesia Nuestra Señora del Pilar</div>
-            <div class="ruta-highlight-item">El Palmar: palmeras, canales de agua y brisa fresca al amanecer</div>
-            <div class="ruta-highlight-item">Vuelta en Café La Esquina · ~km 3 · 100m terracería</div>
-            <div class="ruta-highlight-item">Correr con seguridad — las banquetas de Todos Santos no lo permiten solos</div>
-          </div>
-        </div>
-
-        <!-- Video vertical -->
-        <div class="ruta-video-outer reveal">
-          <div class="ruta-video-wrap">
-            <div class="ruta-video-frame">
-              <video
-                src="assets/stravaroutevideo.mp4"
-                autoplay
-                muted
-                loop
-                playsinline
-                preload="metadata"
-              ></video>
-            </div>
-            <p class="ruta-video-caption">Flyover de la ruta · Strava route flyover</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
   <!-- REGISTRO -->
   <section id="registro">
     <div class="container">
@@ -899,21 +662,47 @@
         <div class="section-label">Entrega de kits · Kit pickup</div>
         <h2 class="section-title">Recoge tu kit<br>cerca de ti.<br><span class="bilingual">Pick up near you.</span></h2>
       </div>
+
+      <!-- Arranque banner -->
+      <div class="reveal" style="background: var(--navy); border-radius: 4px; padding: 1.5rem 2rem; margin-bottom: 2.5rem; display:flex; align-items:center; gap: 1.5rem; flex-wrap:wrap;">
+        <div style="font-size: 2rem;">🏁</div>
+        <div style="flex:1;">
+          <p style="font-family:'DM Mono',monospace; font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color: var(--terracotta); margin-bottom:0.3rem;">Arranque · Race Start</p>
+          <p style="color:white; font-family:'Playfair Display',serif; font-size:1.2rem; font-weight:700; margin-bottom:0.3rem;">Domingo 3 de mayo · 7:00 AM</p>
+          <p style="color:rgba(255,255,255,0.7); font-size:0.88rem; line-height:1.6;">Casa Tere · Calle Miguel Hidalgo, Centro de Todos Santos<br>
+          <em style="font-size:0.82rem; color:rgba(255,255,255,0.5);">Se recomienda llegar a partir de las 6:00–6:30 AM para estacionarse · Arrive by 6:00–6:30 AM for parking.</em></p>
+        </div>
+        <a href="https://maps.app.goo.gl/yaMgYtXj3mNsQbKT7" target="_blank" style="font-family:'DM Mono',monospace; font-size:0.7rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--terracotta); text-decoration:none; border:1px solid var(--terracotta); padding:0.5rem 1rem; border-radius:2px; white-space:nowrap;">Ver mapa ↗</a>
+      </div>
+
       <div class="kit-locations reveal">
         <div class="kit-card">
           <div class="kit-city">Todos Santos</div>
-          <div class="kit-contact">Oficina de Amy Rex</div>
-          <div class="kit-info">Punto oficial de inscripción y entrega.<br>Official registration & pickup point.<br><br>📅 Fechas por confirmar · Dates TBD</div>
+          <div class="kit-contact">Oficina Amy Rex · Casa Tere</div>
+          <div class="kit-info">Punto oficial de inscripción, entrega y arranque de la carrera.<br>Official registration, pickup & race start.<br><br>
+            <a href="https://maps.app.goo.gl/yaMgYtXj3mNsQbKT7" target="_blank" style="color:var(--terracotta); font-size:0.82rem; font-family:'DM Mono',monospace;">Ver ubicación ↗</a><br><br>
+            📅 Fechas por confirmar · Dates TBD</div>
         </div>
         <div class="kit-card">
           <div class="kit-city">La Paz</div>
-          <div class="kit-contact">Punto Karla / Adán</div>
-          <div class="kit-info">Distribución La Paz para corredores de la ciudad.<br>La Paz distribution point.<br><br>📅 Fechas por confirmar · Dates TBD</div>
+          <div class="kit-contact">South Baja Realtors · Malecón</div>
+          <div class="kit-info">Entrega con Karla y Adán en la oficina de South Baja Realtors en el Malecón de La Paz.<br>Pickup at South Baja Realtors on La Paz Malecón.<br><br>
+            <a href="https://maps.app.goo.gl/CKn1qvCaAHJbewc47" target="_blank" style="color:var(--terracotta); font-size:0.82rem; font-family:'DM Mono',monospace;">Ver ubicación ↗</a><br><br>
+            📅 Fechas por confirmar · Dates TBD</div>
         </div>
         <div class="kit-card">
-          <div class="kit-city">Los Cabos</div>
-          <div class="kit-contact">Punto Marely</div>
-          <div class="kit-info">Distribución San José del Cabo y Los Cabos.<br>San José del Cabo & Los Cabos distribution.<br><br>📅 Fechas por confirmar · Dates TBD</div>
+          <div class="kit-city">San José del Cabo</div>
+          <div class="kit-contact">Café La Comer · con Marely</div>
+          <div class="kit-info">Entrega con Marely en Café La Comer, San José del Cabo.<br>Pickup at Café La Comer with Marely.<br><br>
+            <a href="https://maps.app.goo.gl/rY95Hb566S8kwpNX7" target="_blank" style="color:var(--terracotta); font-size:0.82rem; font-family:'DM Mono',monospace;">Ver ubicación ↗</a><br><br>
+            📅 Fechas por confirmar · Dates TBD</div>
+        </div>
+        <div class="kit-card">
+          <div class="kit-city">Cabo San Lucas</div>
+          <div class="kit-contact">The Face Project</div>
+          <div class="kit-info">Entrega en The Face Project, Cabo San Lucas.<br>Pickup at The Face Project, Cabo San Lucas.<br><br>
+            <a href="https://maps.app.goo.gl/oScY2GikCSrMzLup9" target="_blank" style="color:var(--terracotta); font-size:0.82rem; font-family:'DM Mono',monospace;">Ver ubicación ↗</a><br><br>
+            📅 Fechas por confirmar · Dates TBD</div>
         </div>
       </div>
       <div class="kit-includes reveal">
@@ -1017,18 +806,8 @@
           <div class="sponsor-logo-slot">
             <img src="images/sponsor-almadelmar.png" alt="Alma del Mar" />
           </div>
-          <div class="sponsor-logo-slot">
-            <img src="images/sponsor-taller17.png" alt="taller 17" />
-          </div>
-          <div class="sponsor-logo-slot">
-            <img src="images/sponsor-todospool.png" alt="Todos Pool" />
-          </div>
-          <div class="sponsor-logo-slot">
-            <img src="images/sponsor-jordan.png" alt="jordan topografia" />
-          </div>
-          <div class="sponsor-logo-slot">
-            <img src="images/sponsor-floral.png" alt="Floral Floreria" />
-          </div>
+          <div class="sponsor-logo-slot placeholder"><span>Espacio disponible</span></div>
+          <div class="sponsor-logo-slot placeholder"><span>Espacio disponible</span></div>
         </div>
       </div>
 
@@ -1079,7 +858,6 @@
     <div class="footer-links">
       <a href="#about">El evento</a>
       <a href="#causa">La causa</a>
-      <a href="#ruta">La ruta</a>
       <a href="#registro">Inscripción</a>
       <a href="#kits">Kits</a>
       <a href="#galeria">Galería</a>
