@@ -829,13 +829,13 @@
     btn.disabled = true;
     btn.textContent = 'Guardando...';
     try {
-      await fetch('https://script.google.com/macros/s/AKfycbzChfemTx9VL_i9Ghh7i_aF48M3GnQ3svwfAt---gy8qzd9XwV0-hY9ZXpzrz6HrQGR/exec', {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ nombre, email, tipo: 'galeria', fecha: new Date().toISOString() })
-      });
-    } catch(e) { /* no-cors always throws, but data is sent */ }
+      const url = 'https://script.google.com/macros/s/AKfycbxjlJTVGSdlUBZW8--DmpKbk4OCMVTsvVuCgX8IA9_c-byWeIEDASSbwpjlyJh07BZm/exec'
+        + '?nombre=' + encodeURIComponent(nombre)
+        + '&email=' + encodeURIComponent(email)
+        + '&tipo=galeria'
+        + '&fecha=' + encodeURIComponent(new Date().toISOString());
+      await fetch(url, { method: 'GET', mode: 'no-cors' });
+    } catch(e) { /* no-cors expected */ }
     document.getElementById('modalForm').style.display = 'none';
     document.getElementById('modalSuccess').classList.add('show');
   }
@@ -851,12 +851,14 @@
       return;
     }
     try {
-      await fetch('https://script.google.com/macros/s/AKfycbzChfemTx9VL_i9Ghh7i_aF48M3GnQ3svwfAt---gy8qzd9XwV0-hY9ZXpzrz6HrQGR/exec', {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ nombre, email, empresa, interes, tipo: '2027', fecha: new Date().toISOString() })
-      });
+      const url = 'https://script.google.com/macros/s/AKfycbxjlJTVGSdlUBZW8--DmpKbk4OCMVTsvVuCgX8IA9_c-byWeIEDASSbwpjlyJh07BZm/exec'
+        + '?nombre=' + encodeURIComponent(nombre)
+        + '&email=' + encodeURIComponent(email)
+        + '&empresa=' + encodeURIComponent(empresa)
+        + '&interes=' + encodeURIComponent(interes)
+        + '&tipo=2027'
+        + '&fecha=' + encodeURIComponent(new Date().toISOString());
+      await fetch(url, { method: 'GET', mode: 'no-cors' });
     } catch(e) {}
     document.getElementById('joinForm').style.display = 'none';
     document.getElementById('joinSuccess').style.display = 'block';
