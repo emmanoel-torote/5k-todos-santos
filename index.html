@@ -351,16 +351,16 @@
     .sponsor-tier-label.principal { color: var(--terracotta); border-bottom-color: rgba(194,106,75,0.3); }
     .sponsors-logos { display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; align-items: center; }
     .sponsor-slot {
-      background: rgba(255,255,255,0.06); border-radius: 4px;
+      background: white; border-radius: 4px;
       padding: 1rem 1.8rem; min-width: 130px; min-height: 65px;
       display: flex; align-items: center; justify-content: center;
-      transition: background 0.2s;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-    .sponsor-slot:hover { background: rgba(255,255,255,0.1); }
+    .sponsor-slot:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
     .sponsor-slot img {
       max-height: 45px; max-width: 110px; object-fit: contain;
-      filter: brightness(0) invert(1); opacity: 0.7;
-      transition: opacity 0.2s;
+      opacity: 0.9; transition: opacity 0.2s;
     }
     .sponsor-slot:hover img { opacity: 1; }
 
@@ -636,27 +636,32 @@
       <div class="sponsor-tier">
         <div class="sponsor-tier-label principal">★ Patrocinador Principal · Principal Sponsor</div>
         <div class="sponsors-logos">
-          <div class="sponsor-slot"><img src="images/sponsor-romex.png" alt="Romex" /></div>
-          <div class="sponsor-slot"><img src="images/sponsor-sbr.png" alt="South Baja Realtors" /></div>
           <div class="sponsor-slot"><img src="images/sponsor-timelife.png" alt="Timelife" /></div>
+          <div class="sponsor-slot"><img src="images/sponsor-sbr.png" alt="South Baja Realtors" /></div>
+          <div class="sponsor-slot"><img src="images/sponsor-romex.png" alt="Romex" /></div>
         </div>
       </div>
       <div class="sponsor-tier">
         <div class="sponsor-tier-label">Patrocinador Colaborador · Collaborator</div>
         <div class="sponsors-logos">
+          <div class="sponsor-slot"><img src="images/sponsor-af.png" alt="AF Design" /></div>
           <div class="sponsor-slot"><img src="images/sponsor-coffeshoplastunas.png" alt="Coffee Shop Las Tunas" /></div>
+          <div class="sponsor-slot"><img src="images/sponsor-dylcor.png" alt="Dylcor" /></div>
           <div class="sponsor-slot"><img src="images/sponsor-journal.png" alt="Journal del Pacífico" /></div>
           <div class="sponsor-slot"><img src="images/sponsor-rare.png" alt="RARE Real Estate" /></div>
-          <div class="sponsor-slot"><img src="images/sponsor-af.png" alt="AF Design" /></div>
-          <div class="sponsor-slot"><img src="images/sponsor-dylcor.png" alt="Dylcor" /></div>
         </div>
       </div>
       <div class="sponsor-tier">
         <div class="sponsor-tier-label">Patrocinador Apoyo · Supporting</div>
         <div class="sponsors-logos">
           <div class="sponsor-slot"><img src="images/sponsor-aldemartri.png" alt="Aldemar Tri" /></div>
-          <div class="sponsor-slot"><img src="images/sponsor-septictruck.png" alt="Septictruck" /></div>
           <div class="sponsor-slot"><img src="images/sponsor-almadelmar.png" alt="Alma del Mar" /></div>
+          <div class="sponsor-slot"><img src="images/sponsor-floral.png" alt="Floral" /></div>
+          <div class="sponsor-slot"><img src="images/sponsor-jordan.png" alt="Jordan" /></div>
+          <div class="sponsor-slot"><img src="images/sponsor-septictruck.png" alt="Septictruck" /></div>
+          <div class="sponsor-slot"><img src="images/sponsor-taller17.png" alt="Taller 17" /></div>
+          <div class="sponsor-slot"><img src="images/sponsor-timelife.png" alt="Todos Pool" /></div>
+          <div class="sponsor-slot"><img src="images/sponsor-todospool.png" alt="Todos Pool" /></div>
         </div>
       </div>
     </div>
